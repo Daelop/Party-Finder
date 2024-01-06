@@ -1,0 +1,36 @@
+{
+    "name":"event-name",
+    "date":"JSON Timestamp String",
+    "listed":"JSON Timestamp String",
+    "description":"event description",
+    "admin":"admin user",
+    "applicationSettings":{
+        "requireIGN":true,
+        "requireServer":true,
+        "requireDiscord":true,
+        "requireEmail":false,
+        "18+":false,
+        "requireTOS":true,
+        "TOSBody":"do you agree to show up?",
+        "discordConsent":true
+    },
+    "participantSettings":{
+        "allowTitle":true,
+        "requireTitle":true,
+        "titleLabel":"Please title your entry",
+        "allowDescription":true,
+        "requireDescription":true,
+        "descriptionLabel":"Please describe your entry",
+        "descriptionLengthMax":200,
+        "descriptionLengthMin":20,
+        "allowImage":true,
+        "requireImage":false,
+        "imageLabel":"Please submit an image of your entry",
+        "allowAdminContact":true
+    },
+    "displaySettings":{
+        "backgroundColor":"white",
+        "textColor":"black",
+        "accentColor":"grey"
+    }
+}

@@ -8,36 +8,32 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
+        <script src="application.js" async defer></script>
     </head>
     <body>
+        <h1 id="eventTitle">Event Title</h1>
     <form id="application">
-        <label for="pName">IGN:</label>
-        <input type="text" id="pName">
-        <label for="pServerOCE">Server:</label>
-        <select id="pServerOCE">Server
-            <Option>
-                Sephirot
-            </Option>
-            <option>
-                Ravana
-            </option>
-            <option>
-                Sophia
-            </option>
-            <option>
-                Zurvan
-            </option>
-            <option>
-                Bismark
-            </option>
-        </select>
-        <label for="discordConsent">Do you consent to being messaged via Discord about your application?</label>
-        <input type="checkbox" id="discordConsent">
-        <label for="TOS" hidden="true"></label>
-        <input type="checkbox" name="TOS" id="TOS" hidden="true">
-        <button type="button" onclick="submitApp()">Submit</button>
+        <label id="emailLabel" for="email">Email:</label>
+        <input type="text" id="email" name="email">
+
+        <label id="discordLabel" for="discord">Discord Username:</label>
+        <input type="text" id="discord" name="discord">
+
+        <label id="ignLabel" for="pName">IGN:</label>
+        <input type="text" id="pName" name="IGN">
+
+        <label id="serverLabel" for="server">Server:</label>
+        <input type="text" id="server" name="server">
+
+        <label id="consentLabel" for="discordConsent" >Do you consent to being messaged via Discord about your application?</label>
+        <input type="checkbox" id="discordConsent" name="discordConsent" >
+
+        <label id="tosLabel" for="TOS"></label>
+        <input type="checkbox" name="TOS" id="TOS" >
+
+        <button type="submit">Submit</button>
     </form>
         
-        <script type="module" src="" async defer></script>
+        
     </body>
 </html>
