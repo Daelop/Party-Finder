@@ -5,10 +5,7 @@ const user = {
 }
 const eventInfo = {
     "name":"event-name",
-    "date":"JSON Timestamp String",
-    "listed":"JSON Timestamp String",
     "description":"event description",
-    "admin":"admin user",
     "applicationSettings":{
         "requireIGN":true,
         "requireServer":true,
@@ -16,7 +13,6 @@ const eventInfo = {
         "requireEmail":true,
         "requireTOS":true,
         "TOSBody":"do you agree to show up?",
-        "discordConsent":true
     },
     "participantSettings":{
         "allowTitle":true,
@@ -25,8 +21,7 @@ const eventInfo = {
         "allowDescription":true,
         "requireDescription":true,
         "descriptionLabel":"Please describe your entry",
-        "descriptionLengthMax":200,
-        "descriptionLengthMin":20,
+        "descriptionLength":[20,200],
         "allowImage":true,
         "requireImage":false,
         "imageLabel":"Please submit an image of your entry",
