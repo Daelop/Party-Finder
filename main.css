@@ -101,3 +101,32 @@ form #open {
   -webkit-text-stroke-color: #72195a;
   -webkit-text-stroke-width: 0.05em;
 }
+.event-search{
+  grid-row-start: 3;
+  align-content: center;
+}
+.filterbtnO{
+  
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  padding:none;
+}
+.filterbtnI{
+  height: 3vh;
+}
+#search{
+height: 3vh;
+
+}
+.sign-up-link{
+  display: inline-block;
+  font-family: monospace;
+  font-size: 2vh;
+  color: #71a9f7;
+  -webkit-text-stroke-color: #6b5ca5;
+  -webkit-text-stroke-width: 0.05em;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  max-width: 30vw;
+}
