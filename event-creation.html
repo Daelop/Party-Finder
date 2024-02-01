@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="main.css"> 
-        <script src="event-creation.js" async defer></script>
-    </head>
-    <body>
-        <header class="header-bar">
-            <img class="logo-small" src="Images/PFlogo.png">
-        </header>
-        <h1 class="event-title">Application for Example Event</h1>
-        <form>
-            <label for="name">Event name: </label>
-            <input type="text" id="name" name="name">
-            <label for="description">Event description: </label>
-            <input type="textarea" id="description" name="description">
-            <label for="date">Event date: </label>
-            <input type="date" id="date" name="date">
-            <input type="time" id="time" name="time">
-            <label for="open">Require an application?: </label>
-            <input type="checkbox" name="open" id="open">
-            <button type="button">Next</button>
-        </form>
-       
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="event-creation.js" async defer></script>
+  </head>
+  <body>
+    <header class="header-bar">
+      <a href="index.html">
+        <img class="logo-small" src="Images/PFlogo.png" />
+      </a>
+    </header>
+    <h1 class="event-title">Create an Event</h1>
+    <form>
+      <div id="part-1">
+        <label for="name">Event name: </label>
+        <input type="text" id="name" name="name" />
+        <label for="description">Event description: </label>
+        <input type="textarea" id="description" name="description" />
+        <label for="game">Game: </label>
+        <input type="text" id="game" name="game">
+        <label for="loc">Event location:</label>
+        <input type="text" id="loc" name="loc" />
+        <label for="date">Event date: </label>
+        <input type="date" id="date" name="date" />
+        <input type="time" id="time" name="time" />
+        <label for="open">Require an application?: </label>
+        <input type="checkbox" name="open" id="open" />
+        <button type="button" onclick="nextCreate()">Next</button>
+      </div>
+      <div id="part-2" hidden="true">
+        <!-- <label for="event-img">Header image(optional): </label>
+            <input type="file" accept=".png, .jpeg, .gif" id="event-img" name="event-img"> -->
+        <label for="bgColour">Background colour: </label>
+        <input type="color" id="bgColour" name="bgColour" />
+        <label for="textColour1">Text colour: </label>
+        <input type="color" id="textColour1" name="textColour1" />
+        <label for="textColour2">Text outline: </label>
+        <input type="color" id="textColour2" name="textColour2" />
+        <button type="button" onclick="eventCreate()">Submit</button>
+      </div>
+    </form>
+  </body>
 </html>
