@@ -3,16 +3,20 @@ const listings = document.querySelector("#event-container");
 let events;
 // get events from api
 async function getEvents() {
-  fetch("https://localhost:8080/events", {
+  fetch("http://localhost:8080/events", {
     method: "GET",
   })
     .then((response) => response.json())
     .then((data) => {
       for (const event of data) {
+        console.log(`url(${event.displaySettings.pic}),${event.displaySettings.backgroundColor}ff`)
         //Defines container and styling for event listing
+        const color = `linear-gradient(${event.displaySettings.backgroundColor}60,${event.displaySettings.backgroundColor}60), url(${event.displaySettings.pic})`
+        console.log(color)
         const eventListing = document.createElement("div");
         eventListing.style.backgroundColor =
           event.displaySettings.backgroundColor;
+        eventListing.style.background = color;
         eventListing.style.color = event.displaySettings.textColor;
         eventListing.style.webkitTextStrokeColor =
           event.displaySettings.textColor2;

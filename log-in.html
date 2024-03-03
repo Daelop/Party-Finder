@@ -16,14 +16,10 @@
             <img class="logo-small" src="Images/PFlogo.png">
             </a>
         </header>
-        <h1 class="event-title">Login:</h1>
-    <form id="login">
-        <label for="username">Username: </label>
-        <input type="text" id="username" name="username">
-        <label for="password">Password: </label>
-        <input type="text" id="password" name="password">
-        <button type="button" onclick="login()">Submit</button>
-    </form>
-    <a class="sign-up-link" href="sign-up.html">Don't have an account?</a>
+        <div class="error-container">
+        <h1 class="error-header">Opps!</h1>
+        <p class="error-message">You must be signed in to do that!</p>
+        <a class="error-button" href="https://discord.com/oauth2/authorize?client_id=1212963361063436319&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fauth%2Fdiscord%2Fredirect&scope=identify" id="login">Sign-in</a>
+    </div>
     </body>
 </html>

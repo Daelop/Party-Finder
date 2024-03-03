@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="edit-event.js" async defer></script>
+    <script src="Auth.js"></script>
+  </head>
+  <body>
+    <script></script>
+    <header class="header-bar">
+      <a href="index.html">
+        <img class="logo-small" src="Images/PFlogo.png" />
+      </a>
+    </header>
+    <h1 class="event-title">Manage your event</h1>
+    <div id="event-controls">
+      <button class="action-button settings-button" onclick="detailsSettings()">
+        Edit event details
+      </button>
+      <button class="action-button settings-button" onclick="displaySettings()">
+        Edit display settings
+      </button>
+      <button class="action-button settings-button" onclick="applySettings()">
+        Edit application settings
+      </button>
+        <button class="action-button settings-button" onclick="participantSettings()">
+            Edit participant settings
+        </button>
+      <button class="action-button settings-button2" onclick="viewApplications()">
+        View applications
+      </button>
+      <button class="action-button settings-button2" onclick="deleteEvent()">
+        Delete event
+      </button>
+    </div>
+    <form id="settings-form">
+        <div id="event-details-settings" class="hide" hidden="true">
+            <label for="name">Event name: </label>
+            <input type="text" id="name" name="name" />
+            <label for="description">Event description: </label>
+            <input type="textarea" id="description" name="description" />
+            <label for="game">Game: </label>
+            <input type="text" id="game" name="game">
+            <label for="loc">Event location:</label>
+            <input type="text" id="loc" name="loc" />
+            <label for="date">Event date: </label>
+            <input type="date" id="date" name="date" />
+            <input type="time" id="time" name="time" />
+        </div>
+        <div id="displaySettings" class="hide" hidden="true">
+            <label for="bgColour">Background colour: </label>
+            <input type="color" id="bgColour" name="bgColour" />
+            <label for="textColour1">Text colour: </label>
+            <input type="color" id="textColour1" name="textColour1" />
+            <label for="textColour2">Text outline: </label>
+            <input type="color" id="textColour2" name="textColour2" />
+        </div>
+        <div id="application-settings" class="hide" hidden="true">
+            <label for="open">Require an application?: </label>
+            <input type="checkbox" name="open" id="open" />
+            <label for="reqIGN">Require in-game name?: </label>
+            <input type="checkbox" name="reqIGN" id="reqIGN" />
+            <label for="req-ser">Require Server?</label>
+            <input type="checkbox" name="req-ser" id="req-ser" />
+            <label for="req-tos">Require terms of service agreement?: </label>
+            <input type="checkbox" name="req-tos" id="req-tos" />
+            <label for="tos">Terms of service: </label>
+            <input type="textarea" id="tos" name="TOS" />
+
+        </div>
+        <div id="participantSettings" class="hide" hidden="true">
+            <label for="allow-title">Allow title: </label>
+            <input type="checkbox" id="allow-title" name="allow-title" />
+            <label for="req-title">Require title: </label>
+            <input type="checkbox" id="req-title" name="req-title" />
+            <label for="title-label">Title label: </label>
+            <input type="text" id="title-label" name="title-label" />
+            <label for="allow-desc">Allow description: </label>
+            <input type="checkbox" id="allow-desc" name="allow-desc" />
+            <label for="req-desc">Require description: </label>
+            <input type="checkbox" id="req-desc" name="req-desc" />
+            <label for="min-desc">Minimum description length: </label>
+           <input type="number" id="min-desc" name="min-desc" />
+            <label for="max-desc">Maximum description length: </label>
+            <input type="number" id="max-desc" name="max-desc" />
+            <label for="allow-image">Allow image: </label>
+            <input type="checkbox" id="allow-image" name="allow-image" />
+            <label for="req-img">Require image: </label>
+            <input type="checkbox" id="req-img" name="req-img" />
+            <label for="img-label">Image label: </label>
+            <input type="text" id="img-label" name="img-label" />
+            <label for="allow-admin-contact">Allow admin contact: </label>
+            <input type="checkbox" id="allow-admin-contact" name="allow-admin-contact" />
+        </div>
+        <div id="applications" class="hide" hidden="true">
+            Coming soon!
+        </div>
+        <div id="delete-event" class="hide" hidden="true">
+            <p>Are you sure you want to delete this event?</p>
+            <button class="action-button" onclick="confirmDelete()">Yes</button>
+        </div>
+        <button class="action-button submit" onclick="submitChanges()">Submit changes</button>
+    
+      </form>
+  </body>
+</html>

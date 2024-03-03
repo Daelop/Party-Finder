@@ -1,9 +1,0 @@
-{
-    "username":"site username",
-    "IGN":"Player Name",
-    "server":"server name",
-    "discord":"discord name",
-    "tos":true,
-    "consent":true,
-    "applicationDate":"JSON Timestamp String"
-}

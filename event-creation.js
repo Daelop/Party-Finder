@@ -1,10 +1,11 @@
 
-
 async function eventCreate(){
     console.log(document.getElementById("name").value);
     console.log(document.getElementById("description").value)
     
     const event = JSON.stringify({
+        creator: User.id,
+        creatorName: User.username,
         name: document.getElementById("name").value,
         description: document.getElementById("description").value,
         open: document.getElementById("open").value == true,
@@ -20,15 +21,20 @@ async function eventCreate(){
     })
     console.log(event)
 
-    await fetch('https://localhost:8080/events',{
+    await fetch('http://localhost:8080/events',{
         method: "POST",
         headers: {
             "Content-Type":"application/json"
         },
         body: event
     })
-    .then((response)=>response.json())
-    .then((json)=>console.log(json))
+    .then((response)=>{
+        
+        response.json()})
+    .then((data)=>{
+        console.log(data)
+        window.location.href = 'events.html'
+    })
 }
 
 function nextCreate(){

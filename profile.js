@@ -1,11 +1,15 @@
+
+
+
 async function getProfile(){
 let params = new URLSearchParams(window.location.search);
 const userId = params.get("id");
-await fetch(`https://localhost:8080/users/${userId}`, {
+await fetch(`http://localhost:8080/users/${userId}`, {
   method: "GET",
 })
   .then((response) => response.json())
   .then((data) => {
+    console.log(data)
     const dateRaw = data.createdAt
     const since = new Date(dateRaw)
     const dateString = since.toDateString()
@@ -23,6 +27,28 @@ await fetch(`https://localhost:8080/users/${userId}`, {
     const userBio = document.createElement("p");
     userBio.className = "user-bio";
     profile.appendChild(userBio).innerHTML = data.bio;
+    listedProfile = data
+  }).then(()=>{
+    checkOwner()
   });}
   getProfile()
-
+  
+  async function checkOwner(){
+    console.log(listedProfile.discordId)
+   await fetch("http://localhost:8080/auth/discord/user", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.id == listedProfile.discordId) {
+          document.getElementById("edit").hidden = false;
+        } else {
+          console.log(data.id, listedEvent.creator)
+          document.getElementById("edit").hidden = true;
+        }
+      });
+  }

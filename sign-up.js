@@ -11,7 +11,10 @@ async function signUp() {
         "Content-Type": "application/json",
       },
     body:JSON.stringify(newUser)
-    });
+    })
+    .then(
+      window.location.href = 'log-in.html'
+    );
   } else {
     alert('Please ensure your passwords match')
     }
